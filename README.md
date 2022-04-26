@@ -13,7 +13,7 @@ per-cookie state.
 To avoid the possibility of amplification attacks, cookies are sent only in
 response to initial packets, which are always 1280 bytes in size.
 
-See [internal/cookie] for details.
+See [internal/cookie](internal/cookie) for details.
 
 ### Noise IK handshake
 
@@ -53,12 +53,12 @@ congestion occurs, congestion window is reset.
 
 And many more!
 
-[internal/sec] contains a Noise_IK_25519_ChaChaPoly_BLAKE2b implementation
+[internal/sec](internal/sec) implements Noise_IK_25519_ChaChaPoly_BLAKE2b
 
-[internal/udp] contains ~~some terrible, cursed garbage~~ a PacketConn for UDP
+[internal/udp](internal/udp) implements ~~some terrible, cursed garbage~~ a UDP PacketConn
 with GRO and GSO support (each, respectively, lets you receive and send UDP
-packets without hogging CPU as hard.)
+packets without hogging CPU too hard.)
 
-[stream_reassembler.go] contains ~~more cursed code~~ a thing that lets you put
+[stream_reassembler.go](stream_reassembler.go) contains ~~more cursed code~~ a thing that lets you put
 fragments of a byte sequence back together, without terrible worst-case comp.
 and memory complexities.
